@@ -1,6 +1,6 @@
 {
   "actorOutputSchemaVersion": 1,
-  "title": "Verifox Email Verifier output",
+  "title": "Bulk Email Verifier output",
   "description": "One row per verified email — deliverability, catch-all, disposable/role/free, and a 0-100 quality score.",
   "properties": {
     "results": {

@@ -1,15 +1,17 @@
 {
-  "title": "Verifox Email Verifier",
-  "description": "Bulk-verify email deliverability with Verifox. No API key needed — you only pay for emails that successfully verify.",
+  "title": "Bulk Email Verifier & Validator",
+  "description": "Verify a list of email addresses in bulk. Returns a deliverability verdict, catch-all, disposable, role and free-provider flags and a 0-100 quality score for every address. Priced per result, no API key needed.",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
     "emails": {
       "title": "Emails",
       "type": "array",
-      "description": "Email addresses to verify. Paste a list, or map in a field from another Actor's dataset.",
+      "description": "Email addresses to verify. Paste a list, or map an email field from another Actor's dataset. Duplicates are removed before verification.",
       "editor": "stringList",
-      "prefill": ["support@stripe.com"]
+      "prefill": [
+        "support@stripe.com"
+      ]
     },
     "mode": {
       "sectionCaption": "Options",
@@ -18,8 +20,16 @@
       "description": "auto = pick per list size (bulk when > 500). realtime = one request per email, streamed. bulk = submit the whole list to the Verifox bulk API, then collect results.",
       "editor": "select",
       "default": "auto",
-      "enum": ["auto", "realtime", "bulk"],
-      "enumTitles": ["Auto (recommended)", "Realtime (stream, small lists)", "Bulk (large lists)"]
+      "enum": [
+        "auto",
+        "realtime",
+        "bulk"
+      ],
+      "enumTitles": [
+        "Auto (recommended)",
+        "Realtime (stream, small lists)",
+        "Bulk (large lists)"
+      ]
     },
     "concurrency": {
       "title": "Concurrency (realtime mode)",
@@ -28,14 +38,9 @@
       "default": 5,
       "minimum": 1,
       "maximum": 20
-    },
-    "apiBaseUrl": {
-      "title": "API base URL (advanced)",
-      "type": "string",
-      "description": "Override the Verifox API base URL. Leave as default unless told otherwise.",
-      "editor": "textfield",
-      "default": "https://api.verifox.ai"
     }
   },
-  "required": ["emails"]
+  "required": [
+    "emails"
+  ]
 }

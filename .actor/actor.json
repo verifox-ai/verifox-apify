@@ -1,8 +1,8 @@
 {
   "actorSpecification": 1,
   "name": "verifox-email-verifier",
-  "title": "Verifox Email Verifier",
-  "description": "Bulk-verify email deliverability with Verifox — syntax, MX, SMTP, disposable/role/free detection, and a quality score. No API key needed; pay only for emails that verify.",
+  "title": "Bulk Email Verifier & Validator: Catch-All Check",
+  "description": "Bulk email verifier and validator. Returns a safe, risky, invalid or unknown verdict for every address, plus catch-all, disposable, role and free-provider flags, typo fixes and a 0-100 quality score. Real SMTP checks, no API key.",
   "version": "0.3",
   "dockerfile": "../Dockerfile",
   "readme": "../README.md",

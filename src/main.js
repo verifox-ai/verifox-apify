@@ -5,7 +5,7 @@ await Actor.init();
 const input = (await Actor.getInput()) ?? {};
 const apiKey = process.env.VERIFOX_API_KEY;
 const concurrency = Math.max(1, Math.min(Number(input.concurrency) || 5, 20));
-const apiBaseUrl = (input.apiBaseUrl || 'https://api.verifox.ai').replace(/\/+$/, '');
+const apiBaseUrl = 'https://api.verifox.ai';
 const mode = ['auto', 'realtime', 'bulk'].includes(input.mode) ? input.mode : 'auto';
 
 let raw = input.emails ?? [];
